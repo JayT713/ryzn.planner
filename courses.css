@@ -1,0 +1,371 @@
+/* Courses Page Styles */
+
+.courses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.courses-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Course Card */
+.course-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.course-actions {
+  z-index: 1;
+}
+
+.course-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.course-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.course-instructor {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.course-details {
+  margin-bottom: 20px;
+}
+
+.course-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.course-detail i {
+  width: 20px;
+  margin-right: 10px;
+  color: var(--text-light);
+}
+
+.course-progress {
+  margin-top: 15px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: var(--bg-dark);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.course-footer {
+  padding: 15px 20px;
+  border-top: 1px solid var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Course Events */
+.course-events-section {
+  margin-top: 40px;
+}
+
+.course-events-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.course-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.course-event {
+  display: flex;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.course-event:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+}
+
+.event-day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-month {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.event-details {
+  flex: 1;
+  padding: 15px;
+}
+
+.event-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.event-tag.physics {
+  background-color: rgba(108, 99, 255, 0.2);
+  color: #6c63ff;
+}
+
+.event-tag.calculus {
+  background-color: rgba(255, 101, 132, 0.2);
+  color: #ff6584;
+}
+
+.event-tag.psychology {
+  background-color: rgba(78, 205, 196, 0.2);
+  color: #4ecdc4;
+}
+
+.event-tag.cs {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.event-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.event-details p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.event-details p i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow);
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-modal:hover {
+  color: var(--text-color);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* File Upload */
+.file-upload {
+  display: flex;
+  align-items: center;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-right: 10px;
+}
+
+.file-upload-label:hover {
+  background-color: var(--bg-light);
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Color Options */
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.color-option.active {
+  border-color: var(--text-color);
+}
+
+.color-option i {
+  color: white;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.color-option.active i {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .course-events {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .form-group {
+    width: 100%;
+  }
+}
+

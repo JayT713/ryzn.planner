@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - ryzn.Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1 class="sidebar-logo">ryzn<span class="accent">.</span></h1>
+            <button id="sidebar-toggle" class="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <div class="sidebar-user">
+            <div class="user-avatar">
+                <img src="/placeholder.svg?height=50&width=50" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <h3>Alex Johnson</h3>
+                <p>Student</p>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-th-large"></i> <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="calendar.html"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a>
+                </li>
+                <li>
+                    <a href="tasks.html"><i class="fas fa-tasks"></i> <span>Tasks</span></a>
+                </li>
+                <li class="active">
+                    <a href="courses.html"><i class="fas fa-book"></i> <span>Courses</span></a>
+                </li>
+                <li>
+                    <a href="syllabus-upload.html"><i class="fas fa-file-upload"></i> <span>Upload Syllabus</span></a>
+                </li>
+                <li>
+                    <a href="progress.html"><i class="fas fa-chart-line"></i> <span>Progress</span></a>
+                </li>
+                <li>
+                    <a href="study-groups.html"><i class="fas fa-users"></i> <span>Study Groups</span></a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h2>Courses</h2>
+                <p class="date-display">Wednesday, March 27, 2025</p>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search courses...">
+                </div>
+                <div class="header-icons">
+                    <button class="icon-btn"><i class="far fa-bell"></i></button>
+                    <button class="icon-btn"><i class="far fa-envelope"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="courses-header">
+                <h3>My Courses</h3>
+                <button class="btn-primary" id="add-course-btn">
+                    <i class="fas fa-plus"></i> Add Course
+                </button>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course Card -->
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #6c63ff;">
+                        <div class="course-actions">
+                            <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <h4>Physics 101</h4>
+                        <p class="course-instructor">Dr. Richard Feynman</p>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>MWF 10:00 - 11:30 AM</span>
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Science Building, Room 302</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-text">View Syllabus</button>
+                        <button class="btn-text">View Tasks</button>
+                    </div>
+                </div>
+
+                <!-- Course Card -->
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #ff6584;">
+                        <div class="course-actions">
+                            <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <h4>Calculus II</h4>
+                        <p class="course-instructor">Prof. Ada Lovelace</p>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>TR 1:00 - 2:30 PM</span>
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Math Building, Room 105</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>42%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 42%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-text">View Syllabus</button>
+                        <button class="btn-text">View Tasks</button>
+                    </div>
+                </div>
+
+                <!-- Course Card -->
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #4ecdc4;">
+                        <div class="course-actions">
+                            <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <h4>Introduction to Psychology</h4>
+                        <p class="course-instructor">Dr. Carl Jung</p>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>TR 9:00 - 10:30 AM</span>
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Humanities Building, Room 201</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-text">View Syllabus</button>
+                        <button class="btn-text">View Tasks</button>
+                    </div>
+                </div>
+
+                <!-- Course Card -->
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #f59e0b;">
+                        <div class="course-actions">
+                            <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <h4>Computer Science 202</h4>
+                        <p class="course-instructor">Prof. Alan Turing</p>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>MWF 2:00 - 3:30 PM</span>
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Tech Building, Room 405</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-text">View Syllabus</button>
+                        <button class="btn-text">View Tasks</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Course Events -->
+            <div class="course-events-section">
+                <h3>Upcoming Course Events</h3>
+                <div class="course-events">
+                    <div class="course-event">
+                        <div class="event-date">
+                            <span class="event-day">28</span>
+                            <span class="event-month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-tag physics">Physics 101</div>
+                            <h4>Midterm Exam</h4>
+                            <p><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Science Building, Room 302</p>
+                        </div>
+                    </div>
+                    <div class="course-event">
+                        <div class="event-date">
+                            <span class="event-day">29</span>
+                            <span class="event-month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-tag calculus">Calculus II</div>
+                            <h4>Problem Set Due</h4>
+                            <p><i class="far fa-clock"></i> 11:59 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Online Submission</p>
+                        </div>
+                    </div>
+                    <div class="course-event">
+                        <div class="event-date">
+                            <span class="event-day">2</span>
+                            <span class="event-month">Apr</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-tag psychology">Psychology</div>
+                            <h4>Research Paper Deadline</h4>
+                            <p><i class="far fa-clock"></i> 11:59 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Online Submission</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Course Modal -->
+    <div class="modal" id="add-course-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Course</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-course-form">
+                    <div class="form-group">
+                        <label for="course-name">Course Name</label>
+                        <input type="text" id="course-name" class="form-control" placeholder="e.g., Physics 101" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-instructor">Instructor</label>
+                        <input type="text" id="course-instructor" class="form-control" placeholder="e.g., Dr. Richard Feynman" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="course-days">Days</label>
+                            <select id="course-days" class="form-control" required>
+                                <option value="">Select days</option>
+                                <option value="MWF">Monday, Wednesday, Friday</option>
+                                <option value="TR">Tuesday, Thursday</option>
+                                <option value="MW">Monday, Wednesday</option>
+                                <option value="TF">Tuesday, Friday</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-time">Time</label>
+                            <input type="text" id="course-time" class="form-control" placeholder="e.g., 10:00 - 11:30 AM" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-location">Location</label>
+                        <input type="text" id="course-location" class="form-control" placeholder="e.g., Science Building, Room 302" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-color">Course Color</label>
+                        <div class="color-options">
+                            <div class="color-option" style="--color: #6c63ff;" data-color="#6c63ff">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="color-option" style="--color: #ff6584;" data-color="#ff6584"></div>
+                            <div class="color-option" style="--color: #4ecdc4;" data-color="#4ecdc4"></div>
+                            <div class="color-option" style="--color: #f59e0b;" data-color="#f59e0b"></div>
+                            <div class="color-option" style="--color: #3b82f6;" data-color="#3b82f6"></div>
+                            <div class="color-option" style="--color: #8b5cf6;" data-color="#8b5cf6"></div>
+                            <div class="color-option" style="--color: #ec4899;" data-color="#ec4899"></div>
+                        </div>
+                        <input type="hidden" id="course-color-input" value="#6c63ff">
+                    </div>
+                    <div class="form-group">
+                        <label for="course-syllabus">Upload Syllabus (Optional)</label>
+                        <div class="file-upload">
+                            <input type="file" id="course-syllabus" accept=".pdf,.doc,.docx">
+                            <label for="course-syllabus" class="file-upload-label">
+                                <i class="fas fa-upload"></i> Choose File
+                            </label>
+                            <span class="file-name">No file chosen</span>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Add Course</button>
+                        <button type="button" class="btn-secondary cancel-modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="courses.js"></script>
+</body>
+</html>
+
